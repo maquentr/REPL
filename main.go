@@ -3,6 +3,7 @@ package main
 import (
 	// "fmt"
 	// "log"
+	"time"
 
 	"github.com/maquentr/REPL/internal/pokeapi"
 )
@@ -15,7 +16,7 @@ type config struct {
 
 func main() {
 	cfg := config {
-		pokeapiClient: pokeapi.NewClient(),
+		pokeapiClient: pokeapi.NewClient(time.Hour),
 	}
 	
 	startRepl(&cfg)
